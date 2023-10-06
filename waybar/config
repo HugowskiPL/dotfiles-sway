@@ -1,0 +1,52 @@
+           {
+                "layer": "top",
+		"position": "bottom",
+                "modules-left": ["sway/workspaces", "sway/mode"],
+		"modules-center": ["cpu", "memory" ],
+                "modules-right": ["bluetooth", "network","wireplumber", "battery", "clock"],
+                "sway/window": {
+                     "max-length": 50
+                },
+		"sway/workspaces": {
+		     "disable-scroll": true,
+		},
+		"cpu": {
+		     "interval": 1,
+		     "format": "  {}%",
+		},
+		"memory": {
+		     "interval": 1,
+		     "format": "  {}%",
+		},
+		"bluetooth": {
+		     "format": "   {status}",
+		     "format-connected": "󰂱  {status} {device_alias}",
+		     "format-on": "  ",
+		     "format-off": ""
+		},
+		"network": {
+		     "format": "{ifname} {ipaddr}",
+		     "format-wifi": "  {essid}",
+		     "format-ethernet": "󰈀  {ipaddr}",
+		     "format-disconnected": "󰌙",
+		     "tooltip-format": "ip:{ipaddr}\n essid:{essid}\n ifname:{ifname}"
+		},
+		"wireplumber": {
+			"scroll-step": 0,
+			"format": "{volume}%  ",
+			"format-muted": "󰖁"
+		},
+                "battery": {
+		     "interval": 5,
+                     "format": "{capacity}% 󱃌",
+		     "format-discharging": "{capacity}% 󰚦",
+		     "format-charging": "{capacity}% 󱐥",
+		     "format-plugged": "{capacity}% 󱐥",
+		     "format-full": "󱈏`",
+                     "format-icons": ["", "", "", "", ""]
+                },
+                "clock": {
+		     "interval": 1,
+                     "format-alt": "{:%d-%m-%y  %H:%M:%S}"
+                }
+           }
