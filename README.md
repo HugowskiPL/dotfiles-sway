@@ -1,0 +1,1 @@
+Dotfiles pochodzące z thinkpada
